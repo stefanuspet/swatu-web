@@ -33,17 +33,18 @@ export default function Team() {
             primaryTextColor: "#2c2c2a",
             lineColor: "#8a9e8c",
             fontFamily: "'DM Sans', sans-serif",
-            fontSize: "13px",
+            fontSize: "14px",
             edgeLabelBackground: "#faf8f4",
             nodeBorder: "#8a9e8c",
           },
           flowchart: {
             curve: "linear",
-            nodeSpacing: 40,
-            rankSpacing: 50,
-            padding: 24,
+            nodeSpacing: 80,
+            rankSpacing: 80,
+            padding: 30,
             htmlLabels: true,
-            wrappingWidth: 120,
+            wrappingWidth: 200,
+            useMaxWidth: true,
           },
         });
 
@@ -106,13 +107,13 @@ export default function Team() {
       </p>
 
       {/* Mermaid chart */}
-      <div className="max-w-4xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10 overflow-x-auto">
         <div
           ref={ref}
-          className="flex justify-center overflow-x-auto
+          className="flex justify-center min-w-max
           [&_svg]:max-w-full
           [&_svg]:h-auto
-          [&_.node_rect]:min-w-[160px]
+          [&_.node_rect]:min-w-[220px]
           [&_.node_rect]:fill-cream
           [&_.node_rect]:stroke-sage
           [&_.node_rect]:stroke-[1px]
@@ -120,9 +121,13 @@ export default function Team() {
           [&_.edgePath_.path]:stroke-[1.5px]
           [&_.label]:font-sans
           [&_.label]:text-charcoal
+          [&_.label]:px-3
+          [&_.label]:py-2
+          [&_.label]:break-words
           [&_.nodeLabel]:text-charcoal
           [&_.nodeLabel]:font-sans
-          [&_.nodeLabel]:text-sm"
+          [&_.nodeLabel]:text-sm
+          [&_.nodeLabel]:whitespace-normal"
         >
           <div className="text-center py-12 text-[#6b6b68] font-serif italic text-lg">
             Loading structure...

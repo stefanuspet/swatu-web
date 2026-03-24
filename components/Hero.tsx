@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
@@ -66,7 +68,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-cream via-cream-dark to-sage-light/30" />
 
         {/* Structural grid */}
-        <svg
+        {/* <svg
           className="absolute inset-0 w-full h-full opacity-10"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -87,17 +89,21 @@ export default function Hero() {
           </defs>
 
           <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
+        </svg> */}
+
+        <Image
+          src="/images/ruko_kebon_bawang_edit.png"
+          alt="Ruko Kebon Bawang"
+          fill
+          className="object-cover opacity-50 blur-sm"
+          priority
+        />
 
         {/* Center label */}
         <div className="absolute inset-0 flex items-center justify-center z-10 px-6">
           <div className="border border-sage-light/50 px-8 py-6 text-center backdrop-blur-sm bg-white/20">
-            <p className="font-serif text-base md:text-lg italic text-[#6b6b68] mb-2">
+            <p className="font-serif text-base md:text-lg italic text-[#6b6b68]">
               Structural Design Portfolio
-            </p>
-
-            <p className="text-[10px] tracking-[0.2em] uppercase text-sage-dark font-sans">
-              Interactive images below
             </p>
           </div>
         </div>
