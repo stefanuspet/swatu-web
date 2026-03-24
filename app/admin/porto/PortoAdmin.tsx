@@ -266,7 +266,7 @@ export default function PortoAdmin({
                 label="Category"
                 name="category"
                 required
-                defaultValue={editing?.type}
+                defaultValue={editing?.category}
               />
 
               <Field

@@ -2,19 +2,13 @@
 
 import { revalidatePath } from "next/cache";
 import { createPorto, updatePorto, deletePorto } from "@/lib/db";
-
-function slugify(str: string) {
-  return str
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
-}
+import { randomUUID } from "crypto";
 
 export async function createPortoAction(formData: FormData) {
   const name = formData.get("name") as string;
 
   await createPorto({
-    id: `${slugify(name)}-${Date.now()}`,
+    id: randomUUID(),
     name,
     type: formData.get("type") as string,
     category: formData.get("category") as any,
@@ -25,7 +19,7 @@ export async function createPortoAction(formData: FormData) {
   });
 
   revalidatePath("/");
-  revalidatePath("/admin/portfolio");
+  revalidatePath("/admin/porto");
 }
 
 export async function updatePortoAction(id: string, formData: FormData) {
@@ -40,12 +34,12 @@ export async function updatePortoAction(id: string, formData: FormData) {
   });
 
   revalidatePath("/");
-  revalidatePath("/admin/portfolio");
+  revalidatePath("/admin/porto");
 }
 
 export async function deletePortoAction(id: string) {
   await deletePorto(id);
 
   revalidatePath("/");
-  revalidatePath("/admin/portfolio");
+  revalidatePath("/admin/porto");
 }
