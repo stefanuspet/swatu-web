@@ -7,9 +7,10 @@ import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { getPorto } from "@/lib/db";
+import type { PortfolioItem } from "@/lib/porto";
 
 export default async function Home() {
-  let portfolio = [];
+  let portfolio: PortfolioItem[] = [];
 
   try {
     portfolio = await getPorto();
