@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { portfolioData, categoryLabels, type PortfolioItem } from "@/lib/porto";
+import { categoryLabels, type PortfolioItem } from "@/lib/porto";
 import PortoCard from "./PortoCard";
 
 type Filter = "all" | PortfolioItem["category"];
@@ -17,13 +17,11 @@ const filters: { key: Filter; label: string }[] = [
   { key: "mixed", label: "Mixed Use" },
 ];
 
-export default function Portfolio() {
+export default function Portfolio({ data = [] }: { data: PortfolioItem[] }) {
   const [active, setActive] = useState<Filter>("all");
 
   const filtered =
-    active === "all"
-      ? portfolioData
-      : portfolioData.filter((p) => p.category === active);
+    active === "all" ? data : data.filter((p) => p.category === active);
 
   return (
     <section

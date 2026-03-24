@@ -248,47 +248,63 @@ export default function PortoAdmin({
               onSubmit={handleSubmit}
               className="px-6 py-8 flex flex-col gap-6"
             >
-              <Field
-                label="Project Name"
-                name="name"
-                required
-                defaultValue={editing?.name}
-              />
+              <div className="grid grid-cols-2 gap-6">
+                <Field
+                  label="Project Name"
+                  name="name"
+                  required
+                  defaultValue={editing?.name}
+                />
 
-              <Field
-                label="Type"
-                name="type"
-                required
-                defaultValue={editing?.type}
-              />
+                <Field
+                  label="Type"
+                  name="type"
+                  required
+                  defaultValue={editing?.type}
+                />
 
-              <Field
-                label="Category"
-                name="category"
-                required
-                defaultValue={editing?.category}
-              />
+                <div className="flex flex-col gap-2">
+                  <label className="text-[10px] tracking-[0.16em] uppercase text-sage-dark font-sans">
+                    Category
+                  </label>
 
-              <Field
-                label="Location"
-                name="location"
-                required
-                defaultValue={editing?.location}
-              />
+                  <select
+                    name="category"
+                    required
+                    defaultValue={editing?.category ?? ""}
+                    className="border-b border-sage-dark/30 bg-transparent py-2 outline-none focus:border-sage-dark text-charcoal"
+                  >
+                    <option value="">Select a category</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="residential">Residential</option>
+                    <option value="hospitality">Hospitality</option>
+                    <option value="religious">Religious</option>
+                    <option value="industrial">Industrial</option>
+                    <option value="mixed">Mixed Use</option>
+                  </select>
+                </div>
 
-              <Field
-                label="Area"
-                name="area"
-                required
-                defaultValue={editing?.area}
-              />
+                <Field
+                  label="Location"
+                  name="location"
+                  required
+                  defaultValue={editing?.location}
+                />
 
-              <Field
-                label="Stories"
-                name="stories"
-                required
-                defaultValue={editing?.stories}
-              />
+                <Field
+                  label="Area"
+                  name="area"
+                  required
+                  defaultValue={editing?.area}
+                />
+
+                <Field
+                  label="Stories"
+                  name="stories"
+                  required
+                  defaultValue={editing?.stories}
+                />
+              </div>
 
               <input type="hidden" name="images" value={imageUrl} />
 
