@@ -19,9 +19,9 @@ export default function PortoCard({ item, featured }: Props) {
     >
       {/* Image */}
       <div className="relative flex-1 overflow-hidden bg-sage-light/20 border-b border-sage-light/20 transition-colors duration-300 group-hover:bg-sage-light/30">
-        {item.images.length > 0 && !imgError ? (
+        {item.images && !imgError ? (
           <Image
-            src={item.images[0]}
+            src={item.images}
             alt={item.name}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
