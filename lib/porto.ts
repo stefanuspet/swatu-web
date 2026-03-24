@@ -12,7 +12,7 @@ export type PortfolioItem = {
   location: string;
   area: string;
   stories: string;
-  images: string; // will be Supabase Storage URLs
+  images: string;
 };
 
 export const portfolioData: PortfolioItem[] = [
