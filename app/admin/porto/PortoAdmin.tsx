@@ -263,6 +263,13 @@ export default function PortoAdmin({
               />
 
               <Field
+                label="Category"
+                name="category"
+                required
+                defaultValue={editing?.type}
+              />
+
+              <Field
                 label="Location"
                 name="location"
                 required
