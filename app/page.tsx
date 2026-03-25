@@ -26,7 +26,7 @@ export default async function Home() {
         <Services />
         <Portfolio data={portfolio} />
         <About />
-        <Team />
+        {/* <Team /> */}
         <Contact />
       </main>
       <Footer />
