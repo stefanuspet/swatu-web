@@ -95,6 +95,7 @@ export default function Hero() {
           src="/images/ruko_kebon_bawang_edit.png"
           alt="Ruko Kebon Bawang"
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover opacity-50 blur-sm"
           priority
         />

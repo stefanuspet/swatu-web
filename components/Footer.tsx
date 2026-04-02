@@ -1,3 +1,5 @@
+"use client";
+
 export default function Footer() {
   return (
     <footer className="bg-[#1e1e1c] px-6 md:px-12 lg:px-16 py-8">
@@ -9,8 +11,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-xs text-white/20 tracking-wide font-sans">
-          © {new Date().getFullYear()} CV. Swatu Engineering. All rights
-          reserved.
+          © 2026 CV. Swatu Engineering. All rights reserved.
         </div>
 
         {/* Credit */}

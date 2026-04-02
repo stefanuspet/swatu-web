@@ -15,7 +15,7 @@ export default function PortoCard({ item, featured }: Props) {
   return (
     <div
       className={`group relative overflow-hidden bg-cream cursor-pointer flex flex-col
-      ${featured ? "lg:col-span-2 lg:min-h-[420px]" : "aspect-[3/4]"}`}
+      ${featured ? "sm:col-span-2 sm:min-h-[320px] lg:col-span-2 lg:min-h-[420px]" : "aspect-[3/4]"}`}
     >
       {/* Image */}
       <div className="relative flex-1 overflow-hidden bg-sage-light/20 border-b border-sage-light/20 transition-colors duration-300 group-hover:bg-sage-light/30">

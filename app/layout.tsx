@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
   title: "CV. Swatu Engineering — Structural Design Consultant",
   description:
@@ -19,6 +21,24 @@ export const metadata: Metadata = {
     title: "CV. Swatu Engineering",
     description: "Structural Design Consultant — Safe, Precise, Reliable",
     type: "website",
+    url: baseUrl,
+    images: [
+      {
+        url: `${baseUrl}/api/og?title=CV. Swatu Engineering&description=Structural Design Consultant`,
+        width: 1200,
+        height: 630,
+        alt: "CV. Swatu Engineering",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CV. Swatu Engineering",
+    description: "Structural Design Consultant — Safe, Precise, Reliable",
+    images: [
+      `${baseUrl}/api/og?title=CV. Swatu Engineering&description=Structural Design Consultant`,
+    ],
   },
 };
 
@@ -29,7 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
