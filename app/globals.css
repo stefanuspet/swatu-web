@@ -66,6 +66,22 @@ html {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
+/* Dark color scheme for contact form inputs */
+#contact input,
+#contact textarea {
+  color-scheme: dark;
+  -webkit-text-fill-color: white;
+}
+
+#contact input:-webkit-autofill,
+#contact input:-webkit-autofill:hover,
+#contact input:-webkit-autofill:focus,
+#contact textarea:-webkit-autofill {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #383836 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 /* Thin scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
