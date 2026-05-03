@@ -114,7 +114,7 @@ export default function Hero() {
           <div className="grid grid-cols-2 gap-px bg-sage-light/30">
             {[
               { num: "30+", label: "Projects completed" },
-              { num: "5+", label: "Cities covered" },
+              { num: "5+", label: "Years of experience on structural design" },
               { num: "10k+", label: "m² designed" },
               { num: "2022", label: "Established" },
             ].map((s) => (

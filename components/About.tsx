@@ -71,7 +71,7 @@ export default function About() {
             {[
               { label: "Structural Engineering", accent: false },
               { label: "30+ Projects", accent: true },
-              { label: "5 Cities", accent: true },
+              { label: "5+ Years of Experience", accent: true },
               { label: "PBG Documentation", accent: false },
             ].map(({ label, accent }) => (
               <div
