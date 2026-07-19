@@ -105,19 +105,6 @@ export default function About() {
                 Daerah Istimewa Yogyakarta 55572
               </p>
             </div>
-            <div className="w-px bg-[#d9d4cb] self-stretch" />
-            <div className="flex-1 min-w-[160px]">
-              <p className="text-[10px] tracking-[0.18em] uppercase text-sage-dark mb-2 font-sans">
-                Bali Office
-              </p>
-              <p className="text-sm leading-relaxed text-[#6b6b68] font-sans">
-                Jl. Raya Sukawati No.75,
-                <br />
-                Sukawati, Kec. Sukawati,
-                <br />
-                Kabupaten Gianyar, Bali 80582
-              </p>
-            </div>
           </div>
         </div>
       </div>

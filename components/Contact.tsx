@@ -55,12 +55,6 @@ ${form.message}
         "Bleber Kidul RT 06 RW 17, Sumberharjo, Prambanan, Sleman, DIY 55572",
       href: "https://maps.google.com/?q=Sumberharjo+Prambanan+Sleman",
     },
-    {
-      label: "Bali Office",
-      value:
-        "Jl. Raya Sukawati No.75, Sukawati, Kec. Sukawati, Kabupaten Gianyar, Bali 80582, Indonesia",
-      href: "https://maps.google.com/?q=Jl.+Raya+Sukawati+No.75+Sukawati+Gianyar+Bali",
-    },
   ];
 
   return (
